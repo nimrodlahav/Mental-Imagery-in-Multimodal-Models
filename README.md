@@ -1,4 +1,4 @@
-# Mental Imagery in Multimodal Models
+# Mental Imagery in Vision-Language Models
 
 This code collects feed-forward activations from a LLaVA (vision-language) model on COCO images and saves them to Parquet for analysis.
 
