@@ -1,2 +1,7 @@
-# Mental-Imagery-in-Multimodal-Models
-Get a closer look at MLP activations in LLaVA, for a better understanding of multimodal models utilizing transformers.
+# Mental Imagery in Multimodal Models
+
+Collect feed-forward activations from a LLaVA (vision-language) model on COCO images and save them to Parquet for analysis.
+
+## Setup
+```bash
+pip install -r requirements.txt
