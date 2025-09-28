@@ -1,0 +1,9 @@
+model_id: llava-hf/llava-1.5-7b-hf
+batch_size: 10
+max_length: 512
+start_index: 210
+num_batches: 5
+coco_root: /path/to/coco2017   # contains val2017/ and annotations/
+outdir: ./outputs
+quant_4bit: true
+dtype: float16
