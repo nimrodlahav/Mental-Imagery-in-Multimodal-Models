@@ -1,0 +1,9 @@
+torch           # on Colab this is preinstalled; locally choose the CUDA build
+transformers>=4.41.0
+accelerate
+bitsandbytes>=0.41.0
+pycocotools
+pillow
+numpy
+pyarrow
+requests
