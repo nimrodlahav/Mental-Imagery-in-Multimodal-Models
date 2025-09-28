@@ -155,7 +155,7 @@ def collect_activations(global_index, rows):
 
 # run code
 nn_model = load_model()
-for i in range(21,100):
+for i in range(100):
     batch = extract_twenty()
     table = collect_activations(i, batch)
     filename = f"/content/drive/MyDrive/activations_batch_{i}.parquet"
