@@ -5,9 +5,9 @@ To identify whether neurons show a **bias toward text or vision**, inspired by n
 
 - Activations per token, layer, neuron were extracted 
 - **modality preference** was computed:  
-  $$
+  $
   \Delta = \text{activation}_{\text{text}} - \text{activation}_{\text{image}}
-  $$
+  $
 - **mean differences + t-values** utilized to get the bigger picture, statistically 
 - Distributions visualized via histograms (PNGs included)
 
