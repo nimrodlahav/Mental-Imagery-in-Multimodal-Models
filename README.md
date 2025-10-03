@@ -2,7 +2,7 @@
 
 ## Mathematical Foundations
 
-This project explores the mathematical underpinnings of artificial neurons, multi-layer perceptrons (MLPs), attention mechanisms, and transformer architectures, as well as statistical foundations like the $t$-statistic.
+This project utilizes the mathematical models of artificial neurons, multi-layer perceptrons (MLPs), attention mechanisms, and transformer architectures, as well as statistical foundations like the $t$-statistic.
 
 ### Artificial Neuron
 
