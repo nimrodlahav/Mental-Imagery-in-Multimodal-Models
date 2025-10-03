@@ -1,6 +1,6 @@
-Mental Imagery In Vision-Language Models
+#**Mental Imagery In Vision-Language Models**
 
-Mathematical Foundations
+##**Mathematical Foundations**
 
 This project explores the mathematical underpinnings of artificial neurons, multi-layer perceptrons (MLPs), attention mechanisms, and transformer architectures, as well as statistical foundations like the $t$-statistic.
 
@@ -17,7 +17,7 @@ $$
 - $b$ : bias term  
 - $f(\cdot)$ : activation function (e.g. ReLU, sigmoid, tanh)
 
-Multi-Layer Perceptron (MLP)
+##**Multi-Layer Perceptron (MLP)**
 
 An MLP stacks multiple layers of neurons. A hidden layer transformation is:
 
@@ -33,7 +33,7 @@ $$
 
 where $W, V$ are weight matrices, $b, c$ are biases, $f$ is the hidden activation, and $g$ is the output activation.
 
-Scaled Dot-Product Attention
+##**Scaled Dot-Product Attention**
 
 Attention allows models to focus on relevant parts of the input. The core operation is:
 
@@ -46,7 +46,7 @@ $$
 - $V$: values  
 - $d_k$: dimensionality of keys (used for scaling)
 
- Multi-Head Attention
+ ##**Multi-Head Attention**
 
 To capture diverse relationships, we use multiple attention heads:
 
@@ -63,22 +63,9 @@ $$
 where $W_i^Q, W_i^K, W_i^V, W^O$ are trainable projection matrices.
 
 
-Transformer Layer
 
-A Transformer block alternates attention and MLPs, with residual connections and normalization:
 
-$$
-\begin{aligned}
-h' &= \text{LayerNorm}(h + \text{MHA}(h)) \\
-h'' &= \text{LayerNorm}(h' + \text{MLP}(h'))
-\end{aligned}
-$$
-
-This structure allows deep networks to model sequential dependencies efficiently.
-
----
-
-## 🔹 t-Statistic
+## **t-Statistic**
 
 In statistics, the $t$-statistic is used to test hypotheses about means:
 
@@ -92,10 +79,6 @@ $$
 - $n$ : sample size  
 
 The resulting $t$ is compared against a $t$-distribution with $n-1$ degrees of freedom.
-
----
-
-## 📖 Summary
 
 - Artificial neurons form the basis of deep learning.  
 - MLPs extend neurons into layered architectures.  
