@@ -3,15 +3,6 @@
 ## Intro
 To identify whether neurons show a **bias toward text or vision**, inspired by neuroscience-style analysis,  we analyze how neurons in **vision-language transformers (LLaVA)** respond to images vs. text using MSCOCO pairs.  
 
-- Activations per token, layer, neuron were extracted 
-- **modality preference** was computed:  
-  $
-  \Delta = \text{activation}_{\text{text}} - \text{activation}_{\text{image}}
-  $
-- **mean differences + t-values** utilized to get the bigger picture, statistically 
-- Distributions visualized via histograms (PNGs included)
-
-
 ## General Mathematical Foundations
 
 This project utilizes the mathematical models of artificial neurons, multi-layer perceptrons (MLPs), attention mechanisms, and transformer architectures, as well as statistical foundations like the $t$-statistic.
