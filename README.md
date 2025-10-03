@@ -35,4 +35,59 @@ where $W, V$ are weight matrices, $b, c$ are biases, $f$ is the hidden activatio
 
 ## Scaled Dot-Product Attention
 
-Attention allows models to focus on relevant
+Attention allows models to focus on relevant parts of the input. The core operation is:
+
+$$
+\text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+$$
+
+- $Q$: queries  
+- $K$: keys  
+- $V$: values  
+- $d_k$: dimensionality of keys (used for scaling)
+
+## Multi-Head Attention
+
+To capture diverse relationships, we use multiple attention heads:
+
+$$
+\text{MHA}(Q,K,V) = \text{Concat}(\text{head}_1, \dots, \text{head}_h) W^O
+$$
+
+with
+
+$$
+\text{head}_i = \text{Attention}(QW_i^Q, \; KW_i^K, \; VW_i^V)
+$$
+
+where $W_i^Q, W_i^K, W_i^V, W^O$ are trainable projection matrices.
+
+## t-Statistic
+
+In statistics, the $t$-statistic is used to test hypotheses about means:
+
+$$
+t = \frac{\bar{x} - \mu}{s / \sqrt{n}}
+$$
+
+- $\bar{x}$ : sample mean  
+- $\mu$ : population mean  
+- $s$ : sample standard deviation  
+- $n$ : sample size  
+
+The resulting $t$ is compared against a $t$-distribution with $n-1$ degrees of freedom.
+
+## Summary
+
+- Artificial neurons form the basis of deep learning  
+- MLPs extend neurons into layered architectures  
+- Attention enables context-aware representations  
+- Transformers build on attention and MLPs with residuals + normalization  
+- The $t$-statistic connects neural learning to traditional statistical inference  
+
+This document serves as a **mathematical reference** for the theory behind modern neural architectures.
+
+## Setup
+
+```bash
+pip install -r requirements.txt
