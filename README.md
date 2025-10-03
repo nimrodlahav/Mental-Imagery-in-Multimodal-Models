@@ -1,10 +1,10 @@
-# 🧠 Mental Imagery: Mathematical Foundations
+Mental Imagery In Vision-Language Models
+
+Mathematical Foundations
 
 This project explores the mathematical underpinnings of artificial neurons, multi-layer perceptrons (MLPs), attention mechanisms, and transformer architectures, as well as statistical foundations like the $t$-statistic.
 
----
-
-## 🔹 Artificial Neuron
+Artificial Neuron
 
 A single artificial neuron computes a weighted sum of its inputs, followed by a non-linear activation:
 
@@ -17,9 +17,7 @@ $$
 - $b$ : bias term  
 - $f(\cdot)$ : activation function (e.g. ReLU, sigmoid, tanh)
 
----
-
-## 🔹 Multi-Layer Perceptron (MLP)
+Multi-Layer Perceptron (MLP)
 
 An MLP stacks multiple layers of neurons. A hidden layer transformation is:
 
@@ -35,9 +33,7 @@ $$
 
 where $W, V$ are weight matrices, $b, c$ are biases, $f$ is the hidden activation, and $g$ is the output activation.
 
----
-
-## 🔹 Scaled Dot-Product Attention
+Scaled Dot-Product Attention
 
 Attention allows models to focus on relevant parts of the input. The core operation is:
 
@@ -50,9 +46,7 @@ $$
 - $V$: values  
 - $d_k$: dimensionality of keys (used for scaling)
 
----
-
-## 🔹 Multi-Head Attention
+ Multi-Head Attention
 
 To capture diverse relationships, we use multiple attention heads:
 
@@ -68,9 +62,8 @@ $$
 
 where $W_i^Q, W_i^K, W_i^V, W^O$ are trainable projection matrices.
 
----
 
-## 🔹 Transformer Layer
+Transformer Layer
 
 A Transformer block alternates attention and MLPs, with residual connections and normalization:
 
