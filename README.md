@@ -1,6 +1,6 @@
 # Mental Imagery In Vision-Language Models
 
-## Mathematical Foundations
+## General Mathematical Foundations
 
 This project utilizes the mathematical models of artificial neurons, multi-layer perceptrons (MLPs), attention mechanisms, and transformer architectures, as well as statistical foundations like the $t$-statistic.
 
@@ -19,7 +19,7 @@ $$
 
 ### Multi-Layer Perceptron (MLP)
 
-An MLP stacks multiple layers of neurons. A hidden layer transformation is:
+An MLP stacks multiple layers of neurons, and is accountable for per token enrichment. A hidden layer transformation is:
 
 $$
 h = f(Wx + b)
@@ -35,7 +35,7 @@ where $W, V$ are weight matrices, $b, c$ are biases, $f$ is the hidden activatio
 
 ### Scaled Dot-Product Attention
 
-Attention allows models to focus on relevant parts of the input. The core operation is:
+Attention allows models to focus on relevant parts of the input - meaning it powers contextualization. The core operation is:
 
 $$
 \text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
@@ -77,15 +77,8 @@ $$
 
 The resulting $t$ is compared against a $t$-distribution with $n-1$ degrees of freedom.
 
-## Summary
-
-- Artificial neurons form the basis of deep learning  
-- MLPs extend neurons into layered architectures  
-- Attention enables context-aware representations  
-- Transformers build on attention and MLPs with residuals + normalization  
-- The $t$-statistic connects neural learning to traditional statistical inference  
-
 This document serves as a **mathematical reference** for the theory behind modern neural architectures.
+
 
 ## Setup
 
