@@ -9,17 +9,17 @@ This project utilizes the mathematical models of artificial neurons, multi-layer
 A single artificial neuron computes a weighted sum of its inputs, followed by a non-linear activation:
 
 $$
-y = f\!\left(\sum_{i=1}^n w_i x_i + b \right)
+y = f\left(\sum_{i=1}^n w_i x_i + b \right)
 $$
 
 - $x_i$ : input features  
 - $w_i$ : learned weights  
 - $b$ : bias term  
-- $f(\cdot)$ : activation function (e.g. ReLU, sigmoid, tanh)
+- $f(\cdot)$ : activation function (e.g. ReLU, sigmoid, SiLU)
 
 ### Multi-Layer Perceptron (MLP)
 
-An MLP stacks multiple layers of neurons, and is accountable for per token enrichment. A hidden layer transformation is:
+An MLP stacks multiple layers of neurons, and is accountable for per-token enrichment. A hidden layer transformation is:
 
 $$
 h = f(Wx + b)
@@ -38,7 +38,7 @@ where $W, V$ are weight matrices, $b, c$ are biases, $f$ is the hidden activatio
 Attention allows models to focus on relevant parts of the input - meaning it powers contextualization. The core operation is:
 
 $$
-\text{Attention}(Q, K, V) = \text{softmax}\!\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
+\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^\top}{\sqrt{d_k}}\right)V
 $$
 
 - $Q$: queries  
