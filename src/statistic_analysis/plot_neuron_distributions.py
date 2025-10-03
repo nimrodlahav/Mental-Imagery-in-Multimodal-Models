@@ -1,18 +1,30 @@
-import plotly.express as px
+!pip install nest_asyncio
 
-def plot_layer_hist(summary_df, metric="mean_diff"):
-    for layer in summary_df["layer"].unique():
-        layer_df = summary_df[summary_df["layer"] == layer]
-        fig = px.histogram(
-            layer_df,
-            x=metric,
-            nbins=50,
-            title=f"Layer {layer} - Distribution of {metric}"
-        )
-        fig.show()
+import nest_asyncio
+import asyncio
+import os
+from pyppeteer import launch
 
-# Load summary (if not in memory)
-summary_df = pd.read_parquet("/content/drive/MyDrive/neuron_summary.parquet")
+nest_asyncio.apply()  # allow nested event loops (needed in Colab)
 
-# Plot distribution of neuron preferences
-plot_layer_hist(summary_df, metric="mean_diff")  # can also use "t_value"
+async def htmls_to_pngs(input_dir="/content/drive/MyDrive/plots",
+                        output_dir="/content/drive/MyDrive/plots/pngs"):
+    os.makedirs(output_dir, exist_ok=True)
+    browser = await launch(headless=True, args=['--no-sandbox'])
+    page = await browser.newPage()
+    await page.setViewport({'width': 1920, 'height': 1080})
+
+    for fname in os.listdir(input_dir):
+        if fname.endswith(".html"):
+            html_path = os.path.join(input_dir, fname)
+            out_path = os.path.join(output_dir, fname.replace(".html", ".png"))
+
+            await page.goto("file://" + html_path)
+            await asyncio.sleep(2)  # wait for plotly JS to render
+            await page.screenshot({'path': out_path, 'fullPage': True})
+            print(f"Converted: {fname} → {out_path}")
+
+    await browser.close()
+
+# Run in Colab properly
+await htmls_to_pngs()
